@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ionic 2 image viewer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Great and flexible image viewer for Ionic 2+</h1>
+    <ul>
+      <li>Tap on the pic to see it fullscreen</li>
+      <li>Slide up/down to close the view</li>
+      <li>Tap on the navigation arrow to close the view</li>
+      <li>Double tap on the pic when open to zoom</li>
+      <li>And more !</li>
+    </ul>
+    
+    <p>Find out about it on <a href="https://github.com/Riron/ionic-img-viewer">the GitHub repo</a></p>
+    
+    <img src="http://via.placeholder.com/500?text=classic+example" imageViewer>
+    
+    <h2>Code opening</h2>
+    <img src="http://via.placeholder.com/150?text=code+trigger" #imageToView (click)="onClick(imageToView)">
+    
+    <h2>High res image loading</h2>
+    <img src="http://via.placeholder.com/150?text=low+res" imageViewer="http://via.placeholder.com/650?text=high+res">
+    
+    <h2>Images in a list</h2>
+    <ion-list>
+      <ion-item class="listItem" *ngFor="let item of items" (click)="itemSelected(item)">
+        <ion-thumbnail item-left>
+          <img src="http://via.placeholder.com/300x300" imageViewer>
+        </ion-thumbnail>
+        <p>item {{ item }}</p>
+      </ion-item>
+    </ion-list>
+
+</ion-content>
